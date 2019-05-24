@@ -33,3 +33,4 @@ client.on('message', async message => {
         message.channel.send(':wavinghi:');
     }
   });
+client.login(process.env.BOT_TOKEN);
