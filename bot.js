@@ -23,6 +23,12 @@ client.on('message', async message => {
 });
 
 client.on('message', async message => {
+  if (message.content === 'ôm'|| message.content === 'hug'|| message.content === 'xin chào'|| message.content === 'Hello'|| message.content === 'Hi') {
+    message.channel.send('<a:huggg:582888528518578189>');
+  }
+});
+
+client.on('message', async message => {
     if (message.content === 'Rụng tờ rứng') {
         message.channel.send('Lụm lụm kìa');
     }
