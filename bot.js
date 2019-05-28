@@ -34,5 +34,11 @@ client.on('message', async message => {
     }
 });
 
+client.on('message', async message => {
+  if (message.content === 'hello'|| message.content === 'hi'|| message.content === 'xin chào'|| message.content === 'Hello'|| message.content === 'Hi') {
+    message.reply('<a:wavinghi:481836075589959680>');
+  }
+});
+
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
