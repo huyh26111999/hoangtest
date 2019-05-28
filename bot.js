@@ -5,7 +5,7 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
-client.on("ready", () =>{
+client.on("ready", async() =>{
 	console.log(`client ${client.user.username} đã online!`);
 	client.user.setStatus("Idle");
 	client.user.setActivity("bé đang tập nói",{type: "PLAYING"});
