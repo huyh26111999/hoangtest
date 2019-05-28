@@ -29,7 +29,7 @@ client.on('message', async message => {
 
 client.on('message', async message => {
     if (message.content === 'vẫy tay nào') {
-        message.channel.send(':wavinghi:');
+        message.channel.send('<a:wavinghi:481836075589959680>');
     }
 });
 
