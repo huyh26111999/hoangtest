@@ -7,7 +7,7 @@ client.on('ready', () => {
 
 client.on("ready",async() => {
 console.log(`${client.user.username} is online!`);
-client.user.setActivity("Bé đang tập nói", {type: "LISTENING"});
+client.user.setActivity("Bé đang tập nói", {type: "PLAYING"});
 });
 
 client.on('message', async message => {
