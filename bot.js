@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const discord = require('discord.js');
 
 client.on('ready', () => {
     console.log('I am ready!');
@@ -26,6 +27,25 @@ client.on('message', async message => {
   if (message.content === 'ôm'|| message.content === 'hug'|| message.content === 'xin chào'|| message.content === 'Hello'|| message.content === 'Hi') {
     message.channel.send('<a:huggg:582888528518578189>');
   }
+});
+
+client.on('message', async message => {
+  if(message.content.startsWith("~list")){
+    let roleName = message.content.split(" ").slice(1).join(" ");
+
+    let membersWithRole = message.guild.members.filter(member => { 
+        return member.roles.find("name", roleName);
+    }).map(member => {
+        return member.user.username;
+    })
+
+    let embed = new discord.RichEmbed({
+        "title": `Danh sánh người có role ${roleName} :`,
+        "description": membersWithRole.join("\n"),
+    });
+
+    return message.channel.send({embed});
+}
 });
 
 client.on('message', async message => {
