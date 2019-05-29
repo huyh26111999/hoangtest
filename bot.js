@@ -30,7 +30,7 @@ client.on('message', async message => {
 });
 
 client.on('message', async message => {
-  if(message.content.startsWith("~list")){
+  if(message.content.startsWith("~list")||message.content.startsWith("ai")){
     let roleName = message.content.split(" ").slice(1).join(" ");
 
     let membersWithRole = message.guild.members.filter(member => { 
