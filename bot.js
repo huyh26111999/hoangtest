@@ -40,7 +40,7 @@ client.on('message', async message => {
     })
 
     let embed = new discord.RichEmbed({
-        "title": `Danh sánh người có role ${roleName} :`,
+        "title": `những người ${roleName} :`,
         "description": membersWithRole.join("\n"),
     });
 
